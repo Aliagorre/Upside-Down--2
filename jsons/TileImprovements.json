@@ -1,18 +1,18 @@
 [
 	{
-		"name": "Iaom",
+		"name": "Iaomu",
 		"uniqueTo": "Upside-Down *2",
 		"terrainsCanBeBuiltOn": ["Land"],
 		"culture": 2,
 		"turnsToBuild": 4,
 		"uniques": ["Can only be built on [Coastal] tiles",
-			"[+2 Culture] for each adjacent [Iaom]",
+			"[+2 Culture] for each adjacent [Iaomu]",
 			"[+2 Gold] <after discovering [Flight]>"],
 		"techRequired": "Construction",
 		"shortcutKey": "M"
 	},
 	{
-		"name": "Ecarret mraf",
+		"name": "Ecarret mrafu",
 		"uniqueTo": "Upside-Down *2",
 		"terrainsCanBeBuiltOn": ["Hill"],
 		"food": 2,
@@ -25,7 +25,7 @@
 		"shortcutKey": "F"
 	},
 	{
-		"name": "Redlop",
+		"name": "Redlopu",
 		"uniqueTo": "Upside-Down *2",
 		"food": 6,
 		"terrainsCanBeBuiltOn": ["Marsh", "Flood plains"],
