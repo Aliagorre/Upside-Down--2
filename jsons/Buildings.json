@@ -1,6 +1,6 @@
 [
    	{
-		"name": "Tnemunom",
+		"name": "Tnemunomu",
 		"replaces": "Monument",
 		"uniqueTo": "Upside-Down *2",
 		"culture": 4,
@@ -11,7 +11,7 @@
 		"uniques": ["Destroyed when the city is captured"]
 	},
 	{
-		"name": "Enirhs",
+		"name": "Enirhsu",
 		"replaces": "Shrine",
 		"uniqueTo": "Upside-Down *2",
 		"faith": 4,
@@ -22,7 +22,7 @@
 		"uniques": ["Only available <when religion is enabled>"]
 	},
 	{
-    	"name": "Yrarbil",
+    	"name": "Yrarbilu",
 		"replaces": "Library",
 		"uniqueTo": "Upside-Down *2",
 		"hurryCostModifier": 25,
@@ -31,7 +31,7 @@
 		"requiredTech": "Writing"
 	},
 	{
-		"name": "Retaw Llim",
+		"name": "Retaw Llimu",
 		"replaces": "Water Mill",
 		"uniqueTo": "Upside-Down *2",
 		"cost": 75,
@@ -45,7 +45,7 @@
 		"requiredTech": "The Wheel"  
 	},
     {
-		"name": "Sllaw",
+		"name": "Sllawu",
 		"replaces": "Walls",
 		"cost": 65,
 		"uniqueTo": "Upside-Down *2",
@@ -56,7 +56,7 @@
 		"uniques": ["Destroyed when the city is captured"]
 	},
     {
-		"name": "Skcarrab",
+		"name": "Skcarrabu",
 	   	"replaces": "Barracks",
 		"uniqueTo": "Upside-Down *2",
 		"hurryCostModifier": 25,
@@ -68,7 +68,7 @@
 		"requiredTech": "Bronze Working"
   	},
     {
-		"name": "Elpmet",
+		"name": "Elpmetu",
 		"replaces": "Temple",
 		"uniqueTo": "Upside-Down *2",
 		"maintenance": 0,
@@ -82,7 +82,7 @@
 			"Destroyed when the city is captured"]
    	},
     {
-		"name": "Tekram",
+		"name": "Tekramu",
 		"replaces": "Market",
 		"uniqueTo": "Upside-Down *2",
 		"gold": 2,
@@ -95,7 +95,7 @@
 		"requiredTech": "Currency"
     },
     {
-		"name": "Pohskrow",
+		"name": "Pohskrowu",
 		"replaces": "Workshop",
 		"uniqueTo": "Upside-Down *2",
 		"cost": 100,
@@ -108,7 +108,7 @@
 		"requiredTech": "Metal Casting"
     },
     {
-		"name": "Ytisrevinu",
+		"name": "Ytisrevinuu",
 		"replaces": "University",
 		"uniqueTo": "Upside-Down *2",
 		"maintenance": 2,
@@ -121,7 +121,7 @@
 		"requiredTech": "Education"
     },
    	{
-		"name": "Eltsac",
+		"name": "Eltsacu",
 		"replaces": "Castle",
 		"uniqueTo": "Upside-Down *2",
 		"cost": 150,
@@ -135,7 +135,7 @@
 		"requiredTech": "Chivalry"
     },
 	{
-		"name": "Arepo Esuoh",
+		"name": "Arepo Esuohu",
 		"replaces": "Opera House",
 		"uniqueTo": "Upside-Down *2",
 		"culture": 8,
@@ -148,7 +148,7 @@
 		"uniques": ["Destroyed when the city is captured"]
 	},
     {
-		"name": "Knab",
+		"name": "Knabu",
 		"replaces": "Bank",
 		"uniqueTo": "Upside-Down *2",	
 		"gold": 4,
@@ -160,7 +160,7 @@
 		"requiredTech": "Banking"
     },
 	{
-		"name": "Llimdniw",
+		"name": "Llimdniwu",
 		"replaces": "Windmill",
 		"uniqueTo": "Upside-Down *2",
 		"production": 4,
@@ -172,5 +172,6 @@
 		"requiredTech": "Economics"
 	}
 ]
+
 
 
