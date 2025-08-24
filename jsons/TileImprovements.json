@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Iaom",
-		"uniqueTo": "Upside-Down",
+		"uniqueTo": "Upside-Down *2",
 		"terrainsCanBeBuiltOn": ["Land"],
 		"culture": 2,
 		"turnsToBuild": 4,
@@ -13,7 +13,7 @@
 	},
 	{
 		"name": "Ecarret mraf",
-		"uniqueTo": "Upside-Down",
+		"uniqueTo": "Upside-Down *2",
 		"terrainsCanBeBuiltOn": ["Hill"],
 		"food": 2,
 		"turnsToBuild": 7,
@@ -26,7 +26,7 @@
 	},
 	{
 		"name": "Redlop",
-		"uniqueTo": "Upside-Down",
+		"uniqueTo": "Upside-Down *2",
 		"food": 6,
 		"terrainsCanBeBuiltOn": ["Marsh", "Flood plains"],
 		"turnsToBuild": 7,
