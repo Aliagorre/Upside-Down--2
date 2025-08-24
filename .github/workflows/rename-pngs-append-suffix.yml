@@ -1,113 +1,45 @@
-name: Rename PNGs — append suffix and open PR
+name: Renommer les images PNG
 
 on:
   workflow_dispatch:
-    inputs:
-      suffix:
-        description: "Suffix to append before the extension (no dash). Example: 'u'"
-        required: false
-        default: "u"
-      use_dash:
-        description: "Set to 'true' to prepend a dash before the suffix (e.g. '-u')"
-        required: false
-        default: "false"
 
 permissions:
-  contents: write # nécessaire pour push / créer PR
+  contents: write
+  pull-requests: write
 
 jobs:
   rename:
+    name: Renommer les fichiers images
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout du dépôt
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Configure git user
+      - name: Renommer les fichiers PNG
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Create branch
-        id: create_branch
-        run: |
-          SUFFIX="${{ github.event.inputs.suffix }}"
-          USE_DASH="${{ github.event.inputs.use_dash }}"
-          # sanitize branch name
-          SAFE_SUFFIX=$(echo "$SUFFIX" | tr -c '[:alnum:]._-' '-')
-          BRANCH="rename-pngs-append-${SAFE_SUFFIX}-${{ github.run_id }}"
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-          git checkout -b "$BRANCH"
-
-      - name: Dry-run (list planned renames)
-        run: |
-          suffix="${{ github.event.inputs.suffix }}"
-          use_dash="${{ github.event.inputs.use_dash }}"
-          sep=""
-          if [ "$use_dash" = "true" ]; then sep="-" ; fi
-          echo "Planned suffix: '${sep}${suffix}'"
-          find . -type f \( -iname '*.png' \) -print | sed 's|^\./||' | while read -r f; do
-            base=$(basename "$f")
-            dir=$(dirname "$f")
-            ext="${base##*.}"
+          find Images/ -type f -iname "*.png" | while read file; do
+            dir=$(dirname "$file")
+            base=$(basename "$file")
             name="${base%.*}"
-            new="${dir}/${name}${sep}${suffix}.${ext}"
-            if [ -e "$new" ]; then
-              echo "SKIP exists: $f -> $new"
+            ext="${base##*.}"
+            if [[ "${name,,}" == *down ]]; then
+              newname="${name} *2.${ext}"
             else
-              echo "$f -> $new"
+              newname="${name}u.${ext}"
+            fi
+            target="$dir/$newname"
+            if [ -e "$target" ]; then
+              echo "Ignoré : $file (cible $newname existe déjà)"
+            else
+              echo "Renommé : $file → $newname"
+              git mv "$file" "$target"
             fi
           done
 
-      - name: Rename files and commit
-        id: rename
-        run: |
-          suffix="${{ github.event.inputs.suffix }}"
-          use_dash="${{ github.event.inputs.use_dash }}"
-          sep=""
-          if [ "$use_dash" = "true" ]; then sep="-" ; fi
-
-          changed=0
-          # find PNGs (case-insensitive), rename using git mv to keep history
-          while IFS= read -r -d '' f; do
-            rel="${f#./}"
-            base=$(basename "$rel")
-            dir=$(dirname "$rel")
-            ext="${base##*.}"
-            name="${base%.*}"
-            new="${dir}/${name}${sep}${suffix}.${ext}"
-            if [ -e "$new" ]; then
-              echo "SKIP exists: $rel -> $new"
-              continue
-            fi
-            mkdir -p "$(dirname "$new")"
-            git mv -- "$rel" "$new" || { echo "git mv failed for $rel"; exit 1; }
-            changed=1
-          done < <(find . -type f \( -iname '*.png' \) -print0)
-
-          if [ "$changed" -eq 0 ]; then
-            echo "No PNG files renamed (no changes or all targets existed)."
-            echo "changed=0" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-
-          git add -A
-          git commit -m "Rename PNG files: append '${sep}${suffix}' before extension"
-          echo "changed=1" >> $GITHUB_OUTPUT
-
-      - name: Create Pull Request (only if changes were made)
-        if: steps.rename.outputs.changed == '1'
-        uses: peter-evans/create-pull-request@v5
+      - name: Créer une Pull Request
+        uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.BRANCH }}
-          title: "Rename PNG files — append '${{ github.event.inputs.suffix }}'"
-          body: |
-            This PR renames PNG files by appending '${{ github.event.inputs.suffix }}' before the `.png` extension.
-            - Files where the target filename already exists are skipped.
-            - Matching is case-insensitive for the `.png` extension.
-          committer: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
-          author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit-message: "Renommage automatique des fichiers PNG"
+          title: "Renommage automatique des fichiers images PNG"
+          body: "Ce PR renomme les fichiers .png selon les règles spécifiées."
           
