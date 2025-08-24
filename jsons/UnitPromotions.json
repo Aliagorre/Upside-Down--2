@@ -1,6 +1,6 @@
 [
 	{
-        "name": "[Roirraw] ability",
+        "name": "[Roirrawu] ability",
         "uniques": [
             "[-20]% Strength for enemy [Military] units in adjacent [All] tiles",
 			"[+66]% Strength <when fighting in [Forest] tiles>",
@@ -9,13 +9,13 @@
         ]
     },
 	{
-		"name": "[Rehcra] ability",
+		"name": "[Rehcrau] ability",
 		"uniques": [
 			"Withdraws before melee combat <with [99]% chance>"
 		]
 	},
 	{
-		"name": "[Namraeps] ability",
+		"name": "[Namraepsu] ability",
 		"uniques": [
 			"[+20] HP when healing",
 			"No movement cost to pillage",
@@ -23,34 +23,34 @@
 		]
 	},
 	{
-		"name": "[Namsdrows] ability",
+		"name": "[Namsdrowsu] ability",
 		"uniques": [
 			"[+66]% Strength <when fighting in [Forest] tiles>",
 			"[+66]% Strength <when fighting in [Jungle] tiles>"
 		]
 	},
 	{
-		"name": "[Namwobssorc] ability",
+		"name": "[Namwobssorcu] ability",
 		"uniques": [
 			"[2] additional attacks per turn",
 			"Can move after attacking"
 		]
 	},
 	{
-		"name": "[Thgink] ability",
+		"name": "[Thginku] ability",
 		"uniques": [
 			"[+200]% Strength <when defending> <when [Embarked]>"
 		]
 	},
 	{
-		"name": "[Namteksum] ability",
+		"name": "[Namteksumu] ability",
 		"uniques": [
 			"Heals [100] damage if it kills a unit",
 			"[+50]% Strength <when attacking>"
 		]
 	},
 	{
-		"name": "[Recnal] ability",
+		"name": "[Recnalu] ability",
 		"uniques": [
 			"No movement cost to pillage",
 			"Transfer Movement to [Great General]",
@@ -59,7 +59,7 @@
 		]
 	},
 	{
-		"name": "[Namelfir] ability",
+		"name": "[Namelfiru] ability",
 		"uniques": [
 			"[+50]% Strength <when fighting in [Snow] tiles>",
 			"[+50]% Strength <when fighting in [Tundra] tiles>",
@@ -71,20 +71,20 @@
 		]
 	},
 	{
-		"name": "[Yrlavac] ability",
+		"name": "[Yrlavacu] ability",
 		"uniques": [
 			"[+100]% Strength <vs [Wounded] units>",
 			"[+100]% to Flank Attack bonuses"
 		]
 	},
 	{
-		"name": "[Rethgif] ability",
+		"name": "[Rethgifu] ability",
 		"uniques": [
 			"[+66]% Strength <vs [Fighter] units>"
 		]
 	},
 	{
-		"name": "[Reetavirp] ability",
+		"name": "[Reetavirpu] ability",
 		"uniques": ["May capture killed [Water] units"]
 	}
 ]
