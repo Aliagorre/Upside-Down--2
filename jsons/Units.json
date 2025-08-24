@@ -103,7 +103,7 @@
 		"upgradesTo": "Trebuchet",
 		"uniques": ["[+400]% Strength <vs cities> <when attacking>",
 			"No defensive terrain bonus",
-			"Must set up to ranged attack",
+			"Must set up to ranged attack"],
 		"hurryCostModifier": 20,
 		"attackSound": "throw"
 	},
