@@ -27,6 +27,7 @@
 			"[+40]% Production when constructing [All] wonders [in all cities]",
 			"[+4] Movement <for [Water] units>", "Gain an extra spy <upon entering the [Renaissance era]>",
 			"[+4 Culture] [in all cities] <before discovering [Steam Power]>",
+			"[+2 Production] from every [Tile]",
 			"[+2 Production] from every [Strategic resource]", "[+200]% [Horses] resource production", "[+200]% [Iron] resource production", "[+200]% [Uranium] resource production",
 			"[+50]% Production towards any buildings that already exist in the Capital",
 			"[+2 Gold] from each Trade Route", "[+200]% [Oil] resource production",
@@ -59,6 +60,7 @@
 		"spyNames": ["II Nis-Mir","Nosaj","Il","Taafer","Semaj","Naej-Luap","Iexela","Suivalf","Taafohlos","Nisuoc","Ihsiaka","Kohsa","Nnahoj"]
 	}
 ]
+
 
 
 
